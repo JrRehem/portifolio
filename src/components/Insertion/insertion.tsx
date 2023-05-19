@@ -7,12 +7,13 @@ export const Insertion = () => {
       <h1>
         <Typewriter text="Olá, meu nome é" hide />
       </h1>
-      <span className="name">
+      <div className="name">
         <Typewriter text="Ruthemberg Rehem." delay={1800} hide />
-      </span>
-      <span className="dev">
+      </div>
+      <div className="dev">
         <Typewriter text="Desenvolvedor Front-End." delay={3400} hide />
-      </span>
+      </div>
+      <button>Entre em Contato</button>
     </Container>
   );
 }

@@ -1,37 +1,41 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  width: 100vw;
 
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4rem;
-
-  ul {
+  nav {
+    position: relative;
     display: flex;
-    gap: 3rem;
-    align-items: center;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    top: 2rem;
 
-    transition: 0.6s;
+    ul {
+      position: fixed;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
 
-    a {
-      display: inline-block;
-      position: relative;
-      line-height: 2.5rem;
-      transition: color 0.2s;
+      transition: 0.6s;
 
-      font-size: 16px;
+      a {
+        display: inline-block;
+        position: relative;
+        padding: 0 0.5rem;
+        line-height: 2.5rem;
+        color: ${props => props.theme.textPrimary};
 
-      cursor: pointer;
+        transition: color 0.2s;
 
-      width: 70px;
+        &:hover {
+          color: ${props => props.theme.primary};
+        }
 
-      &:hover {
-        font-weight: bold;
+        &.active {
+          color: ${props => props.theme.primary};
+          font-weight: bold;
+        }
       }
     }
   }

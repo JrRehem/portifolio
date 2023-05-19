@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  margin-top: 16rem;
 
   h1 {
     color: ${(props) => props.theme.textSecondary};
@@ -39,12 +38,12 @@ export const Summary = styled.div`
     display: flex;
     align-items: center;
     position: relative;
+    width: 450px;
 
     .item__project {
       background: ${(props) => props.theme.secondary};
-      height: 120px;
-      width: 550px;
-      position: absolute;
+      height: 150px;
+
 
       p {
         color: ${(props) => props.theme.textPrimary};
@@ -54,15 +53,39 @@ export const Summary = styled.div`
     }
   }
 
+  .skill {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+    column-gap: 0.5rem;
+    width: 450px;
+
+    span {
+      background: ${(props) => props.theme.skill};
+      border-radius: 10px;
+      color: ${(props) => props.theme.textSkill};
+
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+
+      font-size: 14px;
+    }
+  }
+
   .icon {
-    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    width: 450px;
 
     .icons {
       color: ${(props) => props.theme.textSecondary};
       width: 40px;
       height: 40px;
 
-      margin-right: 2rem;
+      margin-left: 2rem;
     }
   }
 `
@@ -76,6 +99,6 @@ export const Project = styled.div`
       background: ${(props) => props.theme.bottom};
       height: 350px;
       width: 530px;
-    }s
+    }
   }
 `

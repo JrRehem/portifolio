@@ -3,31 +3,30 @@ import styled from "styled-components";
 export const Container = styled.section`
   display: flex;
   justify-content: space-between;
-  height: 100%;
-  width: 100%;
+  align-items: center;
 
-  margin-top: 12.5rem;
+  padding: 100px 0;
 `
 
 export const Profile = styled.div`
-
   .border__color {
     display: flex;
     align-items: center;
     justify-content: center;
     background: ${(props) => props.theme.backgroundProfile};
     border-radius: 50%;
-    width: 210px;
-    height: 210px;
+    width: 410px;
+    height: 410px;
 
     .circle {
       background: ${(props) => props.theme.perfil};
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      width: 400px;
+      height: 400px;
 
       img {
         border-radius: 50%;
+        object-fit: contain;
       }
     }
   }
